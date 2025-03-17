@@ -12,6 +12,12 @@ This folder has the FastAPI backend for the AIScheduler project.
 uv sync
 ```
 
+3. Run:
+
+```bash
+source .venv/bin/activate
+```
+
 3. Run the following command:
 
 ```bash
