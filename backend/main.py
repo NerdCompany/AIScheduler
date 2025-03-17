@@ -2,10 +2,11 @@ from dotenv import dotenv_values
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-origin = dotenv_values(".env")["FRONT_ENV"]
+frontend = dotenv_values(".env")["FRONT_ENV"]
+local = dotenv_values(".env")["LOCAL_ENV"]
 
 app = FastAPI()
-origins = [origin]
+origins = [frontend, local]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
